@@ -1,10 +1,10 @@
 import googlemaps
 import numpy as np
 
-API_KEY = 'YOUR_API_KEY'
+API_KEY = 'Use-your-key'
 gmaps = googlemaps.Client(key=API_KEY)
 
-def fetch_transit_stops(location, radius=2000):
+def fetch_transit_stops(location, radius):
     """
     Fetch nearby transit stops for a given location within a specified radius.
     Returns a list of transit stops.
@@ -24,7 +24,7 @@ def fetch_directions(house_location, transit_stops, mode="walking"):
             distances.append(directions[0]['legs'][0]['distance']['value'] / 1609.34)  # Convert meters to miles
     return distances
 
-def top_houses_by_average(houses, h, radius=2000, mode="walking"):
+def top_houses_by_average(houses, h, radius, mode="walking"):
     house_distances = []
 
     for house in houses:
@@ -39,7 +39,7 @@ def top_houses_by_average(houses, h, radius=2000, mode="walking"):
 
     return sorted(house_distances, key=lambda x: x["distance"])[:h]
 
-def top_houses_by_weighted(houses, h, radius=2000, mode="walking"):
+def top_houses_by_weighted(houses, h, radius, mode="walking"):
     house_distances = []
 
     for house in houses:
@@ -62,7 +62,7 @@ def top_houses_by_weighted(houses, h, radius=2000, mode="walking"):
 
     return sorted(house_distances, key=lambda x: x["distance"])[:h]
 
-def top_houses_by_knn(houses, h, radius=2000, k=3, mode="walking"):
+def top_houses_by_knn(houses, h, radius, k=3, mode="walking"):
     house_distances = []
 
     for house in houses:
