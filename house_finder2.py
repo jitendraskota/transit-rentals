@@ -1,7 +1,7 @@
 import googlemaps
 import numpy as np
 
-API_KEY = 'AIzaSyDaFd_79oAhW2uCOuHjYzaYPpIUll5jCfg'
+API_KEY = 'Use-your-key'
 gmaps = googlemaps.Client(key=API_KEY)
 
 def fetch_transit_stops(location, radius):
