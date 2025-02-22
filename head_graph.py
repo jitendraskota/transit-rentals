@@ -11,8 +11,8 @@ import house_finder2_graph
 import networkx as nx
 
 # API Keys
-API_KEY = "8f3681604dec4d8db976530952221ab3"
-G_API_KEY = 'AIzaSyDaFd_79oAhW2uCOuHjYzaYPpIUll5jCfg'
+API_KEY = "Use-your-key"
+G_API_KEY = 'Use-your-key'
 
 # Base URLs
 BASE_URL = "https://api.rentcast.io/v1/listings/rental/long-term"
